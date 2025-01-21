@@ -1,11 +1,25 @@
-# Agent-R: A Framework for On-Policy Self-Correction in Interactive Environments
+<h1 align="center">Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training</h1>
+<p align="center">
+[<a href="https://arxiv.org/">Paper</a>] 
+[<a href="https://github.com/bytedance/Agent-R">Code</a>] 
+</p>
 
+## What's New
++  [2025.01.21] We release Agent-R.
+   + The code is available at [Agent-R](https://github.com/bytedance/Agent-R).
+   
 ## Introduction
-Large Language Models (LLMs) agents are increasingly pivotal for addressing complex tasks in interactive and agentic environments. Existing work primarily focuses on enhancing performance through behavior cloning from stronger experts, yet such approaches often falter in real-world applications, mainly due to the inability to recover from errors. However, step-level critique data is notoriously difficult and expensive to collect. Automating and dynamically constructing self-critique datasets is thus crucial to empowering models with intelligent agent capabilities. In this work, we propose an iterative self-training framework, **Agent-R**, that enables language Agent to Reflect on the fly. Unlike traditional methods that reward or penalize actions solely based on correctness, our approach leverages Monte Carlo Tree Search (MCTS) to construct training samples that recover correct trajectories from erroneous ones. A key challenge of agent task reflection lies in the necessity for timely revision rather than waiting until the end of a rollout to revise errors. To address this, we introduce a model-guided critique construction mechanism: the actor model identifies the first error step (within its current capability) in a failed trajectory. Starting from it, we splice it with the adjacent correct path, which shares the same parent node in the tree. This strategy enables the model to learn reflection based on its current policy, therefore yielding better learning efficiency. To further explore the scalability of this self-improvement paradigm, we investigate iterative refinement of both error correction capabilities and dataset construction. Our findings demonstrate that this approach continuously improves the model’s ability to recover from errors and enables earlier/timely error correction. Extensive experiments on three representative interactive and agentic environments show that the proposed framework effectively equips agents to identify and correct erroneous actions while avoiding loops, achieving superior performance compared to baseline methods (+5.59%).
+We propose an iterative self-training framework, **Agent-R**, that enables language Agent to Reflect on the fly. Unlike traditional methods that reward or penalize actions solely based on correctness, our approach leverages Monte Carlo Tree Search (MCTS) to construct training samples that recover correct trajectories from erroneous ones. A key challenge of agent task reflection lies in the necessity for timely revision rather than waiting until the end of a rollout to revise errors. To address this, we introduce a model-guided critique construction mechanism: the actor model identifies the first error step (within its current capability) in a failed trajectory. Starting from it, we splice it with the adjacent correct path, which shares the same parent node in the tree. To further explore the scalability of this self-improvement paradigm, we investigate iterative refinement of both error correction capabilities and dataset construction.
+
+<p align="center">
+<img width="85%" alt="image" src="./assets/method.png">    
+</p>
+
+More details are in the paper.
 
 ## Repository Structure
 - `mcts_collection.py`: Implements the MCTS-based trajectory generation framework.
-- `path_collection.py`: Generates revision trajectories based on on-policy evaluation.
+- `path_collection.py`: Generates revision trajectories based on model-guided evaluation.
 - `eval.py`: Script for evaluating the agent's performance across specified tasks.
 
 ## Installation
