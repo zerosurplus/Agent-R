@@ -1,12 +1,13 @@
 <h1 align="center">Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training</h1>
 <p align="center">
-[<a href="https://arxiv.org/">Paper</a>] 
+[<a href="https://arxiv.org/abs/2501.11425">Paper</a>] 
 [<a href="https://github.com/bytedance/Agent-R">Code</a>] 
 </p>
 
 ## What's New
 +  [2025.01.21] We release Agent-R.
-   + The code is available at [Agent-R](https://github.com/bytedance/Agent-R).
+   + The paper is available at [Agent-R Paper](https://arxiv.org/abs/2501.11425).
+   + The code is available at [Agent-R Code](https://github.com/bytedance/Agent-R).
    
 ## Introduction
 We propose an iterative self-training framework, **Agent-R**, that enables language Agent to Reflect on the fly. Unlike traditional methods that reward or penalize actions solely based on correctness, our approach leverages Monte Carlo Tree Search (MCTS) to construct training samples that recover correct trajectories from erroneous ones. A key challenge of agent task reflection lies in the necessity for timely revision rather than waiting until the end of a rollout to revise errors. To address this, we introduce a model-guided critique construction mechanism: the actor model identifies the first error step (within its current capability) in a failed trajectory. Starting from it, we splice it with the adjacent correct path, which shares the same parent node in the tree. To further explore the scalability of this self-improvement paradigm, we investigate iterative refinement of both error correction capabilities and dataset construction.
