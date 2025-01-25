@@ -128,6 +128,7 @@ export MODEL_NAME=YOUR_MODEL_NAME
 export MODEL_DIR=YOUR_MODEL_DIR
 export TASK=YOUR_TASK
 export TEMP=YOUR_TEMP
+export MAX_TOKEN_LENGTH=YOUR_MAX_TOKEN_LENGTH # Replace with the maximum token length for the model
 export ALPHA=YOUR_ALPHA # the lower bound for high-quality trajectories
 export BETA=YOUR_BETA # The distinguishable gap
 
@@ -203,4 +204,10 @@ Their contributions to the open-source community have been invaluable and greatl
 ## Citation
 If you use this code in your research, please cite:
 ```bibtex
-```# Agent-R
+@article{yuan2025agent,
+  title={Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training},
+  author={Yuan, Siyu and Chen, Zehui and Xi, Zhiheng and Ye, Junjie and Du, Zhengyin and Chen, Jiecao},
+  journal={arXiv preprint arXiv:2501.11425},
+  year={2025}
+}
+```

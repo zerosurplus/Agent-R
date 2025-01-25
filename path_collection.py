@@ -66,7 +66,7 @@ def revise_worst_path(calling, worst_path, best_path, task_description):
     for node in worst_path[1:]:
         # Generate the prompt for the verifier
         action_obs_prompt = '\n'.join(action_obs)
-        max_len = 7600
+        max_len = int(os.environ["MAX_TOKEN_LENGTH"])
         while len(action_obs_prompt.split()) > max_len - 60:
             action_obs_prompt = action_obs_prompt[6:]  # Truncate prompt if too long
 
