@@ -1,15 +1,38 @@
-<h1 align="center">Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training</h1>
+<div align="center">
+ 👋 Hi, everyone! 
+    <br>
+    We are <b>ByteDance Seed team.</b>
+</div>
+
 <p align="center">
-[<a href="https://arxiv.org/abs/2501.11425">Paper</a>] 
-[<a href="https://github.com/bytedance/Agent-R">Code</a>] 
+  You can get to know us better through the following channels👇
+  <br>
+  <a href="https://team.doubao.com/">
+    <img src="https://img.shields.io/badge/Website-%231e37ff?style=for-the-badge&logo=bytedance&logoColor=white"></a>
+  <a href="https://github.com/user-attachments/assets/93481cda-a7f3-47f3-b333-fe6b3da86b78">
+    <img src="https://img.shields.io/badge/WeChat-07C160?style=for-the-badge&logo=wechat&logoColor=white"></a>
+ <a href="https://www.xiaohongshu.com/user/profile/668e7e15000000000303157d?xsec_token=ABl2-aqekpytY6A8TuxjrwnZskU-6BsMRE_ufQQaSAvjc%3D&xsec_source=pc_search">
+    <img src="https://img.shields.io/badge/Xiaohongshu-%23FF2442?style=for-the-badge&logo=xiaohongshu&logoColor=white"></a>
+  <a href="https://www.zhihu.com/org/dou-bao-da-mo-xing-tuan-dui/">
+    <img src="https://img.shields.io/badge/zhihu-%230084FF?style=for-the-badge&logo=zhihu&logoColor=white"></a>
 </p>
 
-## What's New
+![seed logo](https://github.com/user-attachments/assets/c42e675e-497c-4508-8bb9-093ad4d1f216)
+
+<h1 align="center">Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training</h1>
+<p align="center">
+  <a href="https://arxiv.org/abs/2501.11425">
+    <img src="https://img.shields.io/badge/AgentR-Paper-red"></a>
+  <a href="https://github.com/bytedance/Agent-R">
+    <img src="https://img.shields.io/badge/AgentR-Project Page-yellow"></a>
+</p>
+
+# Updates
 +  [2025.01.21] We release Agent-R.
-   + The paper is available at [Agent-R Paper](https://arxiv.org/abs/2501.11425).
-   + The code is available at [Agent-R Code](https://github.com/bytedance/Agent-R).
+   + 🔥 The paper is available at [Agent-R Paper](https://arxiv.org/abs/2501.11425).
+   + 🔥 The code is available at [Agent-R Code](https://github.com/bytedance/Agent-R).
    
-## Introduction
+# Introduction
 We propose an iterative self-training framework, **Agent-R**, that enables language Agent to Reflect on the fly. Unlike traditional methods that reward or penalize actions solely based on correctness, our approach leverages Monte Carlo Tree Search (MCTS) to construct training samples that recover correct trajectories from erroneous ones. A key challenge of agent task reflection lies in the necessity for timely revision rather than waiting until the end of a rollout to revise errors. To address this, we introduce a model-guided critique construction mechanism: the actor model identifies the first error step (within its current capability) in a failed trajectory. Starting from it, we splice it with the adjacent correct path, which shares the same parent node in the tree. To further explore the scalability of this self-improvement paradigm, we investigate iterative refinement of both error correction capabilities and dataset construction.
 
 <p align="center">
@@ -18,7 +41,7 @@ We propose an iterative self-training framework, **Agent-R**, that enables langu
 
 More details are in the paper.
 
-## Repository Structure
+# Getting started
 - `mcts_collection.py`: Implements the MCTS-based trajectory generation framework.
 - `path_collection.py`: Generates revision trajectories based on model-guided evaluation.
 - `eval.py`: Script for evaluating the agent's performance across specified tasks.
@@ -189,10 +212,10 @@ python3 eval.py \
     --max_steps <number_of_steps>
 ```
 
-## License
+# License
 This project is licensed under the Apache-2.0 License.
 
-## Acknowledgements
+# Acknowledgements
 
 We would like to express our gratitude to the following open-source projects that have significantly contributed to the development of this project:
 
@@ -201,7 +224,7 @@ We would like to express our gratitude to the following open-source projects tha
 
 Their contributions to the open-source community have been invaluable and greatly appreciated.
 
-## Citation
+# Citation
 If you use this code in your research, please cite:
 ```bibtex
 @article{yuan2025agent,
@@ -211,3 +234,7 @@ If you use this code in your research, please cite:
   year={2025}
 }
 ```
+
+# About [ByteDance Seed Team](https://team.doubao.com/)
+
+Founded in 2023, ByteDance Seed Team is dedicated to crafting the industry's most advanced AI foundation models. The team aspires to become a world-class research team and make significant contributions to the advancement of science and society.
