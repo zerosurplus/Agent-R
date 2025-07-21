@@ -27,7 +27,7 @@ class FuncCallOffline:
     def __init__(self, model_name=None):
         from vllm import LLM, SamplingParams
         self.model_name = model_name
-        self.llm = LLM(model=os.environ["MODEL_DIR"], dtype="half")
+        self.llm = LLM(model=os.environ["MODEL_DIR"], tensor_parallel_size=4, dtype="half", enforce_eager=True)
         if "TEMP" in os.environ:
             print(f'当前 TEMP 值: {os.environ["TEMP"]}')
         else:

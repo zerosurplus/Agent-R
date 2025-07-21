@@ -59,8 +59,8 @@ def setup_conversation(env):
     return conv
 
 def perform_mcts_search(Task, calling, env, conv, model_name, idx):
-
     recent_actions = []
+    print(f"[DEBUG] Task ID: {idx}, Recent Actions: {recent_actions}")  # 添加这一行
     mcts_search = ExtendedMCTS(calling=calling, max_len=int(os.environ["MAX_TOKEN_LENGTH"]), model_name=model_name, env=env, idx=idx)
 
     mcts_search.search(env, conv, recent_actions)
@@ -90,7 +90,10 @@ def load_task_data(Task):
     Loads test and training data for the given task.
     """
     test_data = read_json(f"mcts_utils/{Task}/{Task}_test.json")
-    train_data = read_json(f"mcts_utils/{Task}/{Task}_train_clean.json")
+    if Task in ["webshop", "textcraft"]:
+        train_data = read_json(f"mcts_utils/{Task}/{Task}_train_clean.json")
+    elif Task == "sciworld":
+        train_data = None
     task_inds = [ind["item_id"].replace(f"{Task}_", "") for ind in test_data]
     return task_inds, train_data
 
@@ -111,6 +114,7 @@ def process_task(Task, task_inds, train_data, model_name, env, calling, min, max
             continue
 
         env.reset(int(idx))
+        print(f"[DEBUG] Environment Reset Complete for task {idx}")
         conv = setup_conversation(env)
         perform_mcts_search(Task, calling, env, conv, model_name, idx)
 
@@ -141,13 +145,12 @@ def main(Task, calling, min, max, task_num, model_name, env_server_base, task_it
     # Initialize the environment
     env = initialize_environment(Task, env_server_base)
 
-    # Load task data
-    task_inds, train_data = load_task_data(Task)
-
     # Process tasks based on the task type
     if Task in ["webshop", "textcraft"]:
+        task_inds, train_data = load_task_data(Task)
         process_task(Task, task_inds, train_data, model_name, env, calling, min, max)
     elif Task == "sciworld":
+        game_nums, task_inds = env.get_game_nums()
         process_sciworld(Task, task_inds, task_num, task_iteration, model_name, env, calling)
     else:
         print(f"Task '{Task}' is not supported.")
@@ -164,7 +167,9 @@ def main_script():
     parser.add_argument("--min", type=int, default=0, help="Minimum range for processing tasks.")
     parser.add_argument("--max", type=int, default=500, help="Maximum range for processing tasks.")
     args = parser.parse_args()
-
+    print(f"[DEBUG] MAX_DEPTH: {os.environ.get('MAX_DEPTH')}")
+    print(f"[DEBUG] ITERA: {os.environ.get('ITERA')}")
+    print(f"[DEBUG] N_GEN: {os.environ.get('N_GEN')}")
     # Load environment variables
     env_server_base = args.env_server_base
     task_num = args.task_num
@@ -186,6 +191,7 @@ def main_script():
             13, 17, 18, 19, 20, 21, 22, 25, 26, 27,
             28, 29, 0
         ]
+        print(f"[DEBUG] Task list: {task_nums[min_range:max_range]}")
         # Iterate over specified task numbers
         for current_task_num in task_nums[min_range:max_range]:
             main(Task, calling, min_range, max_range, current_task_num, model_name, env_server_base, task_iteration)

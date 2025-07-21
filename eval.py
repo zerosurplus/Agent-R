@@ -62,10 +62,11 @@ def main(Task: str, model_name: str, env_server_base: str, max_steps: int):
     env = initialize_environment(Task, env_server_base)
 
     # Load task indices
-    temp = read_json(f"test_id/{Task}_test.json")
+    temp = read_json(f"mcts_utils/{Task}/{Task}_test.json")
     task_inds = [ind["item_id"].replace(f"{Task}_", "") for ind in temp]
-
+    print(f"[DEBUG] Loaded {len(task_inds)} tasks: {task_inds}")
     # Process each task index
+    calling = FuncCallOffline(model_name=model_name)
     for idx in task_inds:
         dir_path = f"test_result/{Task}/{model_name}"
         file_path = f"{dir_path}/search_results_{idx}.json"
@@ -76,7 +77,7 @@ def main(Task: str, model_name: str, env_server_base: str, max_steps: int):
 
         env.reset(int(idx))
         conv = setup_conversation(env)
-        perform_test(FuncCallOffline(model_name=model_name), env, conv, model_name, idx, max_steps)
+        perform_test(calling, env, conv, model_name, idx, max_steps)
 
 if __name__ == "__main__":
     # Argument parsing
