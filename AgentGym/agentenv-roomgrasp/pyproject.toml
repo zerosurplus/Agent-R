@@ -1,0 +1,20 @@
+[project]
+name = "agentenv_roomgrasp"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "example", email = "example@example.com"},
+]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "gymnasium",
+    "requests",
+    "transformers"
+]
+requires-python = ">=3.7"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+roomgrasp = "agentenv_roomgrasp:launch"

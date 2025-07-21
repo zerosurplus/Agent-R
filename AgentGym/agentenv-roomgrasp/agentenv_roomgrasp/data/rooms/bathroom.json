@@ -1,0 +1,96 @@
+{
+    "id": "bathroom",
+    "door_open": false,
+    "furnitures": [
+        {
+            "furniture_id": "medicine_cabinet",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "toothbrush",
+                    "tag": "hygiene",
+                    "count": 1
+                },
+                {
+                    "id": "soap",
+                    "tag": "hygiene",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "sink",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "towel",
+                    "tag": "hygiene",
+                    "count": 1
+                },
+                {
+                    "id": "shampoo",
+                    "tag": "hygiene",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "shower",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "body_wash",
+                    "tag": "hygiene",
+                    "count": 1
+                },
+                {
+                    "id": "razor",
+                    "tag": "hygiene",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "toilet",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "toilet_paper",
+                    "tag": "hygiene",
+                    "count": 3
+                },
+                {
+                    "id": "air_freshener",
+                    "tag": "hygiene",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "laundry_basket",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "dirty_towel",
+                    "tag": "hygiene",
+                    "count": 2
+                },
+                {
+                    "id": "dirty_shirt",
+                    "tag": "clothes",
+                    "count": 1
+                }
+            ]
+        }
+    ]
+}

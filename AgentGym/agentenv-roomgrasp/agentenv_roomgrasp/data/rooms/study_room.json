@@ -1,0 +1,96 @@
+{
+    "id": "study_room",
+    "door_open": false,
+    "furnitures": [
+        {
+            "furniture_id": "bookshelf",
+            "furniture_type": "cupboard",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "notebook",
+                    "tag": "study",
+                    "count": 1
+                },
+                {
+                    "id": "pen",
+                    "tag": "study",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "study_table",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "laptop",
+                    "tag": "electronic",
+                    "count": 1
+                },
+                {
+                    "id": "charger",
+                    "tag": "electronic",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "file_cabinet",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "folder",
+                    "tag": "study",
+                    "count": 3
+                },
+                {
+                    "id": "paper",
+                    "tag": "study",
+                    "count": 5
+                }
+            ]
+        },
+        {
+            "furniture_id": "bookcase_top",
+            "furniture_type": "cupboard",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "dictionary",
+                    "tag": "study",
+                    "count": 1
+                },
+                {
+                    "id": "novel",
+                    "tag": "study",
+                    "count": 2
+                }
+            ]
+        },
+        {
+            "furniture_id": "lamp",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "bulb",
+                    "tag": "electronic",
+                    "count": 1
+                },
+                {
+                    "id": "light_switch",
+                    "tag": "tool",
+                    "count": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "id": "kitchen",
+    "door_open": false,
+    "furnitures": [
+        {
+            "furniture_id": "fridge",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "apple",
+                    "tag": "food",
+                    "count": 3
+                },
+                {
+                    "id": "milk",
+                    "tag": "food",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "table_01",
+            "furniture_type": "table",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "knife",
+                    "tag": "tool",
+                    "count": 1
+                },
+                {
+                    "id": "spoon",
+                    "tag": "tool",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "pantry",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "flour",
+                    "tag": "food",
+                    "count": 2
+                },
+                {
+                    "id": "rice",
+                    "tag": "food",
+                    "count": 4
+                }
+            ]
+        },
+        {
+            "furniture_id": "oven",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "oven_mitts",
+                    "tag": "tool",
+                    "count": 1
+                },
+                {
+                    "id": "tray",
+                    "tag": "tool",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "cabinet",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "plate",
+                    "tag": "tool",
+                    "count": 4
+                },
+                {
+                    "id": "bowl",
+                    "tag": "tool",
+                    "count": 3
+                }
+            ]
+        }
+    ]
+}

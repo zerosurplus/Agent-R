@@ -1,0 +1,96 @@
+{
+    "id": "bedroom",
+    "door_open": false,
+    "furnitures": [
+        {
+            "furniture_id": "wardrobe",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "shirt",
+                    "tag": "clothes",
+                    "count": 2
+                },
+                {
+                    "id": "hat",
+                    "tag": "clothes",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "nightstand",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "key",
+                    "tag": "tool",
+                    "count": 1
+                },
+                {
+                    "id": "lotion",
+                    "tag": "hygiene",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "bedside_drawer",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "diary",
+                    "tag": "study",
+                    "count": 1
+                },
+                {
+                    "id": "headphones",
+                    "tag": "electronic",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "mirror",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "comb",
+                    "tag": "hygiene",
+                    "count": 1
+                },
+                {
+                    "id": "makeup_kit",
+                    "tag": "hygiene",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "dresser",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "socks",
+                    "tag": "clothes",
+                    "count": 3
+                },
+                {
+                    "id": "belt",
+                    "tag": "clothes",
+                    "count": 1
+                }
+            ]
+        }
+    ]
+}

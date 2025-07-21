@@ -1,0 +1,96 @@
+{
+    "id": "living_room",
+    "door_open": false,
+    "furnitures": [
+        {
+            "furniture_id": "desk_01",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "red_cube",
+                    "tag": "toy",
+                    "count": 1
+                },
+                {
+                    "id": "remote_control",
+                    "tag": "electronic",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "cupboard_01",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "blue_sphere",
+                    "tag": "toy",
+                    "count": 2
+                },
+                {
+                    "id": "game_console",
+                    "tag": "electronic",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "sofa",
+            "furniture_type": "desk",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "pillow",
+                    "tag": "clothes",
+                    "count": 2
+                },
+                {
+                    "id": "blanket",
+                    "tag": "clothes",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "tv_cabinet",
+            "furniture_type": "cupboard",
+            "openable": true,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "dvd_player",
+                    "tag": "electronic",
+                    "count": 1
+                },
+                {
+                    "id": "remote",
+                    "tag": "electronic",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "furniture_id": "coffee_table",
+            "furniture_type": "table",
+            "openable": false,
+            "opened": false,
+            "objects": [
+                {
+                    "id": "magazine",
+                    "tag": "study",
+                    "count": 2
+                },
+                {
+                    "id": "coasters",
+                    "tag": "tool",
+                    "count": 4
+                }
+            ]
+        }
+    ]
+}
