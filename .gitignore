@@ -1,3 +1,10 @@
 sensitive_info_result.txt
 **/__pycache__/
 **/.DS_Store
+/test_result/
+/train/
+/xtuner_config/
+/models/
+/mcts_result/
+/mcts_training_data/
+/work_dirs/
